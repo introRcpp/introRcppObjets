@@ -8,7 +8,7 @@ XPtr<dodo> mkDodo1(int a, int b) {
   Rcout << "Création du dodo x : ";
   dodo x(a, b);
   // création du pointeur
-  XPtr<dodo> p(&x, true);
+  XPtr<dodo> p(&x, false);
   Rcout << "On renvoie un pointeur vers x ; mais x sort du scope !\n";
   return p;
 }
@@ -17,7 +17,7 @@ XPtr<dodo> mkDodo1(int a, int b) {
 XPtr<dodo> mkDodo2(int a, int b) {
   // new alloue de la mémoire et appelle le constructeur 
   dodo * p_Dodo = new dodo(a, b);
-  // Création d'un 'smart pointeur' 
+  // Création du pointeur XPtr 
   XPtr<dodo> xp_Dodo(p_Dodo);
   return xp_Dodo;
 }
