@@ -1,0 +1,5 @@
+S3method(print,rdv)
+importFrom(Rcpp,evalCpp)
+useDynLib(introRcppObjets, .registration=TRUE)
+exportPattern("^[[:alpha:]]+")
+
