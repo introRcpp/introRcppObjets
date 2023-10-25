@@ -163,6 +163,15 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// dodo_shared_ptrs
+void dodo_shared_ptrs();
+RcppExport SEXP _introRcppObjets_dodo_shared_ptrs() {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    dodo_shared_ptrs();
+    return R_NilValue;
+END_RCPP
+}
 // dodo_vecteur
 void dodo_vecteur();
 RcppExport SEXP _introRcppObjets_dodo_vecteur() {
@@ -198,6 +207,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_introRcppObjets_dodo_construit_detruit", (DL_FUNC) &_introRcppObjets_dodo_construit_detruit, 0},
     {"_introRcppObjets_dodo_copie_reference", (DL_FUNC) &_introRcppObjets_dodo_copie_reference, 0},
     {"_introRcppObjets_dodo_move", (DL_FUNC) &_introRcppObjets_dodo_move, 0},
+    {"_introRcppObjets_dodo_shared_ptrs", (DL_FUNC) &_introRcppObjets_dodo_shared_ptrs, 0},
     {"_introRcppObjets_dodo_vecteur", (DL_FUNC) &_introRcppObjets_dodo_vecteur, 0},
     {"_introRcppObjets_dodo_vecteur2", (DL_FUNC) &_introRcppObjets_dodo_vecteur2, 0},
     {NULL, NULL, 0}

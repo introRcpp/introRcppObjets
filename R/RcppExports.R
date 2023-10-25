@@ -61,6 +61,10 @@ dodo_move <- function() {
     invisible(.Call(`_introRcppObjets_dodo_move`))
 }
 
+dodo_shared_ptrs <- function() {
+    invisible(.Call(`_introRcppObjets_dodo_shared_ptrs`))
+}
+
 dodo_vecteur <- function() {
     invisible(.Call(`_introRcppObjets_dodo_vecteur`))
 }
